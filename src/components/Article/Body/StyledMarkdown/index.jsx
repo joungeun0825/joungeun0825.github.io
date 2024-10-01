@@ -47,19 +47,19 @@ const StyledMarkdown = styled.div`
 
   & h2 {
     margin-top: 50px;
-    font-size: 24px;
+    font-size: 28px;
   }
 
   & h3 {
     margin-top: 30px;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   & h4,
   & h5,
   & h6 {
     margin-top: 30px;
-    font-size: 16px;
+    font-size: 22px;
   }
 
   & .heading-anchor {
@@ -135,6 +135,17 @@ const StyledMarkdown = styled.div`
 
   & tr:last-child td {
     border-bottom: none;
+  }
+
+  pre[class*="language-"] {
+    background-color: #1e1e1e;
+    color: ${(props) => props.theme.name === 'dark' ? props.theme.colors.codeBlockText : '#f8f8f2'};
+  }
+
+  code[class*="language-"] {
+    font-size: 14.4px;
+    background-color: #1e1e1e;
+    color: ${(props) => props.theme.name === 'dark' ? props.theme.colors.codeBlockText : '#f8f8f2'};
   }
 
   & *:not(pre) > code.language-text,
